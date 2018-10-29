@@ -22,4 +22,9 @@ complete -F _docker_compose dc
 # tabtab complete for lib (launch in background)
 complete -F _command lib
 
+# auto-complete for gradle
+source /etc/bash_completion.d/gradle-completion.bash
+
+# Make a folder and go into it
+mkcd() { mkdir -p $1; cd $1 }
 
