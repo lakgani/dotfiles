@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/snap/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH="/home/ganesh/.oh-my-zsh"
@@ -64,6 +65,7 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  git-prompt
   colored-man-pages
   zsh-syntax-highlighting
   zsh-autosuggestions

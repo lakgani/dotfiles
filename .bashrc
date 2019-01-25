@@ -2,6 +2,9 @@
 # if [ -f ~/dotfiles/.bashrc ]; then
 #    . ~/dotfiles/.bashrc
 # fi
+if [ -f ~/dotfiles/sensible.bash ]; then
+   source ~/dotfiles/sensible.bash
+fi
 
 # Git prompt - courtesy of bash-git-prompt
 GIT_PROMPT_ONLY_IN_REPO=1
