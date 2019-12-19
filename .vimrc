@@ -39,5 +39,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
