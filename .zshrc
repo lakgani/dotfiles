@@ -68,7 +68,15 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose nvm z zsh-autosuggestions)
+plugins=(
+         git
+         docker
+         docker-compose
+         nvm
+         z
+         zsh-autosuggestions
+         npm
+        )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,3 +113,16 @@ export HSTR_CONFIG=hicolor        # get more colors
 bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
 alias xmuse=cd ~/Documents/Programming/xMUSE-Development
+
+export EDITOR="vim"
+
+export PATH="$PATH:/snap/bin:/usr/local/go/bin:~/Downloads/sts-4.5.0.RELEASE"
+alias lzd='lazydocker'
+
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+# Preserve MANPATH if you already defined it somewhere in your config.
+# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"

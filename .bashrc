@@ -38,3 +38,8 @@ mkcd() {
 	cd $1
 }
 
+# Add snap bin folder to path
+export PATH="/snap/bin/:$PATH"
+
+# Set Vim as preferred editor
+export EDITOR="vim"
