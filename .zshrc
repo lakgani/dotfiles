@@ -112,11 +112,8 @@ export HISTFILE=~/.zsh_history  # ensure history file visibility
 export HSTR_CONFIG=hicolor        # get more colors
 bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
-alias xmuse=cd ~/Documents/Programming/xMUSE-Development
-
 export EDITOR="vim"
 
-export PATH="$PATH:/snap/bin:/usr/local/go/bin:~/Downloads/sts-4.5.0.RELEASE"
 alias lzd='lazydocker'
 
 NPM_PACKAGES="${HOME}/.npm-packages"
