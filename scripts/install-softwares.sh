@@ -13,6 +13,7 @@ declare -a APT_SOFTWARES=(
     gnome-tweaks
     make
     g++
+    bat
     # meld
     # git-cola
     # tmux
