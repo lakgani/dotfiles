@@ -31,9 +31,9 @@ declare -a SNAP_SOFTWARES_CLASSIC=(
     # webstorm
 )
 
-# sudo apt update
+sudo apt update
 
-sudo apt install "${APT_SOFTWARES[@]}"
+sudo apt install -y "${APT_SOFTWARES[@]}"
 
 # sudo snap install "${SNAP_SOFTWARES[@]}"
 
