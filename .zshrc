@@ -33,7 +33,7 @@ ZSH_THEME="agnoster"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -134,6 +134,15 @@ eval "$(fnm env)"
 
 eval "$(starship init zsh)"
 
+# Suggestions from https://martinheinz.dev/blog/110
+setopt EXTENDED_HISTORY      # Write the history file in the ':start:elapsed;command' format.
+setopt HIST_IGNORE_ALL_DUPS  # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_IGNORE_SPACE     # Do not record an event starting with a space.
+setopt HIST_VERIFY           # Do not execute immediately upon history expansion.
+setopt APPEND_HISTORY        # append to history file (Default)
+setopt HIST_NO_STORE         # Don't store history commands
+setopt HIST_REDUCE_BLANKS    # Remove superfluous blanks from each command line being added to the history.
+
 
 
 # tabtab source for packages
@@ -144,6 +153,6 @@ eval "$(starship init zsh)"
 export SAM_CLI_TELEMETRY=0
 
 
-export HISTORY_IGNORE="(ls|hstr)"
+export HISTORY_IGNORE="(ls|hstr|cd|pwd|cd)"
 
 
