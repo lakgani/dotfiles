@@ -8,7 +8,7 @@ export ZSH="/home/$USER/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -80,6 +80,7 @@ plugins=(
 	 pip
 	 zsh-autosuggestions
 	 zsh-syntax-highlighting
+	 poetry
         )
 
 source $ZSH/oh-my-zsh.sh
@@ -135,28 +136,14 @@ eval "$(starship init zsh)"
 
 
 
-# Added by serverless binary installer
-export PATH="$HOME/.serverless/bin:$PATH"
-
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
 
 export SAM_CLI_TELEMETRY=0
-export TEST_ADMIN_DB=dev_pg_db
 
-# bun completions
-[ -s "/home/gpendyala/.bun/_bun" ] && source "/home/gpendyala/.bun/_bun"
-
-# Bun
-export BUN_INSTALL="/home/gpendyala/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 export HISTORY_IGNORE="(ls|hstr)"
 
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
